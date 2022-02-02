@@ -1,0 +1,22 @@
+{
+  "name": "airtable_plugin_1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Airtable_Plugin_1",
+  "author": "zanewolf",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
