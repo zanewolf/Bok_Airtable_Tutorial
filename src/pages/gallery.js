@@ -2,18 +2,15 @@ import React from 'react'
 import Layout from "../components/layout";
 import {graphql} from "gatsby";
 import Card from "../components/card";
-import '../styles/gallery.module.css';
-
+import {galleryStyle} from '../styles/gallery.module.css';
 
 export default function Gallery({data}) {
     return (
         <Layout pageTitle="Monster Gallery">
-            <div>
+            <div className={galleryStyle}>
                 {data && data.allAirtable.nodes.map((node,id) =>{
                     return (
-                        <li className={"card"} key={id}>
-                            <Card monster={node.data}></Card>
-                        </li>
+                            <Card monster={node.data} key={id}></Card>
                     )
                 })}
             </div>

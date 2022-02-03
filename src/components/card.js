@@ -1,9 +1,12 @@
 import React from 'react'
 import {Link} from "gatsby";
+import {
+        cardStyle
+    } from "../styles/card.module.css"
 
 export default function Card({monster,children}) {
     return (
-        <div className={`card`}>
+        <div className={cardStyle}>
             <img
                 className='avatar'
                 src={monster.Image}
@@ -12,12 +15,12 @@ export default function Card({monster,children}) {
             <h1 className='header-lg center-text'>
                 {monster.Monster}
             </h1>
-            <h2 className='center-text'>
+            <h3 className='center-text'>
                 {monster.Creator}
-            </h2>
-            <h2 className='center-text'>
-                {monster.Skill}
-            </h2>
+            </h3>
+            <p className='center-text'>
+                Skills: {monster.Skill}
+            </p>
             <h4 className='center-text'>
                 <Link to={'/monster/'+monster.slug}>
                     Read More
